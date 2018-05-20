@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {getUser} from '../../ducks/reducer'
 import Nav from '../Nav/Nav';
+import Post from '../Post/Post';
 
  class Dashboard extends Component {
     componentDidMount(){
@@ -11,11 +12,13 @@ import Nav from '../Nav/Nav';
     }
     render(){
         let {user_name, img} = this.props.user;
+        
         return(
             <div>
                 <Nav/>
                 <h2>News Feed</h2>
                 <hr/> 
+                <Post/>
                 {
                    user_name ?
                 <div></div> :

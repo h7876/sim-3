@@ -77,7 +77,20 @@ app.get('/auth/me', function (req, res){
     }
 })
 
-app.get('/api/posts', controller.getPosts);
+// app.get('/api/posts', controller.getPosts);
+
+app.get('/api/posts', (req, res, next) => {
+    const dbInstance = req.app.get('db');
+
+    dbInstance.get_posts()
+    .then(posts => {res.status(200).send(posts);
+        console.log(posts);
+   }).catch(err => {
+    console.log(err);
+    res.status(500).send(err)
+});
+}
+)
 
 app.listen(SERVER_PORT, ()=> {
     console.log(`Listening on port ${SERVER_PORT}`)

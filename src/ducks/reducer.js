@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const initialState ={
-    user: {}
+    user: {},
+    post: {}
 }
 
 const GET_USER = 'GET_USER'
@@ -20,7 +21,7 @@ export function getUser(){
 
 export function getPosts(){
     let postData = axios.get('/api/posts').then(res => {
-        return res.data;
+        return res.data[0];
     })
     return {
         type:GET_POSTS,
@@ -32,7 +33,8 @@ export default function reducer(state= initialState, action){
     switch(action.type){
         case GET_USER + '_FULFILLED':
         return Object.assign({}, state, {user: action.payload})
-      
+        case GET_POSTS + '_FULFILLED':
+        return Object.assign({}, state, {post: action.payload})
 
         default:
     return state;
