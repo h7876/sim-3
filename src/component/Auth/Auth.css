@@ -1,0 +1,27 @@
+.test {
+    position: relative;
+    top: 0;
+    left:0;
+    color: #fff;
+    z-index: 1;
+  }
+.auth_container {
+    border-radius: 8px;
+    -webkit-box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
+            box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.25), 0 10px 10px 0 rgba(0, 0, 0, 0.26);
+    background-image: -webkit-linear-gradient(353deg, #ff7a6e, #Ffd670);
+    background-image: -o-linear-gradient(353deg, #ff7a6e, #Ffd670);
+    background-image: linear-gradient(97deg, #ff7a6e, #Ffd670);
+    width: 35vw;
+    height: 55vh;
+    display: -ms-flexbox;
+    z-index: 0;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 20px;
+  }

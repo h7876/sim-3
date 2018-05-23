@@ -18,8 +18,8 @@ export class Post extends Component {
                 <Nav/>
                 Post
                 <div>
-                {user_name}
-                {message} 
+                <p>{user_name}</p>
+                <p>{message} </p>
                 </div>
                 </div>
         )
